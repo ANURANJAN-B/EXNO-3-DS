@@ -156,22 +156,24 @@ plt.show()
 
 <img width="910" height="561" alt="image" src="https://github.com/user-attachments/assets/2815a025-6ca7-4f0e-b34f-ce16cef49a3f" />
 
+
+sm.qqplot(np.reciprocal(df["Moderate Negative Skew"]),line='45')
+plt.show()
+
+
+<img width="929" height="562" alt="image" src="https://github.com/user-attachments/assets/3514bf75-a7f4-4996-9bda-2d91453e6261" />
+
 from sklearn.preprocessing import QuantileTransformer
 qt=QuantileTransformer(output_distribution='normal',n_quantiles=891)
 df["Moderate Negative Skew"]=qt.fit_transform(df[["Moderate Negative Skew"]])
 sm.qqplot(df["Moderate Negative Skew"],line='45')
 plt.show()
 
-<img width="929" height="562" alt="image" src="https://github.com/user-attachments/assets/3514bf75-a7f4-4996-9bda-2d91453e6261" />
+<img width="1062" height="557" alt="image" src="https://github.com/user-attachments/assets/fdc0df94-ff4f-494f-b9ee-8f172e84066a" />
 
 df["Highly Negative Skew_1"]=qt.fit_transform(df[["Highly Negative Skew"]])
 sm.qqplot(df["Highly Negative Skew"],line='45')
 plt.show()
-
-<img width="1062" height="557" alt="image" src="https://github.com/user-attachments/assets/fdc0df94-ff4f-494f-b9ee-8f172e84066a" />
-
-dt=pd.read_csv("/content/titanic_dataset.csv")
-dt
 
 <img width="828" height="546" alt="image" src="https://github.com/user-attachments/assets/e6a91604-cf7d-4e86-be39-e35b836e8e64" />
 
